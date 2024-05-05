@@ -1,0 +1,1280 @@
+/*https://gist.github.com/robinrendle/1d20c566c5e5fbd67f25*/
+/*Box sizing (the nuclear option)*/
+html {
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -ms-box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/* Fix font rendering defaults */
+html, button {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-size: 100%;
+  height: 100%;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, input, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+}
+
+/* IE fixes for HTML5 elements */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+strong, b, mark {
+  font-weight: bold;
+  font-style: inherit;
+}
+
+em, i, cite, q, address, dfn, var {
+  font-style: italic;
+  font-weight: inherit;
+}
+
+a, u, ins {
+  text-decoration: none;
+}
+
+pre, code, samp, kbd {
+  font-family: monospace;
+}
+
+iframe {
+  width: 100%;
+}
+
+img {
+  /*max-width: 100%;
+     -msinterpolation-mode: bicubic;*/
+  border: none;
+  height: auto;
+}
+
+input, select, textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-size: 100%;
+}
+
+ol, ul, dl {
+  list-style: none;
+}
+
+/*.selector {
+  @include prefix(transform, rotate(45deg), webkit ms);
+}
+*/
+/* a = (current browser width(100vw) - minimum operating size) DIVIDED by (max-range - min range)
+    b = (max-font-size(42) - base-font-size(28))
+    c = b * a
+    result = base-font-size + c
+*/
+body {
+  font-size: 0.8em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-image: url("../img/wood.jpg");
+}
+
+main {
+  padding: 0 1em 1em;
+}
+main h2 {
+  margin: 0 0 0.25em;
+}
+main > h2 {
+  font-size: 1.7em;
+  margin: 0 0 0.5em;
+}
+main > section > aside {
+  flex: 1 1 1em;
+  margin: 0 1em auto 0;
+  align-self: top;
+}
+main > section > aside a {
+  display: block;
+  border-radius: 8px;
+  border: solid hsl(60deg, 60%, 70%) 1px;
+  box-shadow: 1px 1px 2px black;
+}
+main > section > aside:hover {
+  border-color: white;
+}
+main > section > aside img {
+  display: block;
+  border-radius: 7px;
+  width: 100%;
+}
+main > p {
+  margin: 0.25em 0;
+}
+main a#FacebookBadge {
+  display: block;
+}
+
+#wrap > div {
+  text-align: left;
+  border: solid white 1em;
+  position: relative;
+  box-shadow: 0 0 50px black;
+}
+#wrap > div > section {
+  background-image: url("../img/burton_small_drop.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  height: 0;
+  padding: 0;
+  padding-bottom: 23.0946882217%;
+  padding-bottom: 26%;
+}
+
+.ribbon-2 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  margin: 0.5em 0 0;
+  font-size: 1.8em;
+  border: solid 1px;
+  font-weight: bold;
+  border-width: 0 0 1px;
+  text-align: center;
+}
+
+a#FacebookBadge {
+  position: relative;
+  width: 9em;
+  margin: 0 0 1em;
+  background-color: transparent;
+  display: none;
+}
+a#FacebookBadge:hover {
+  background-color: #4267b2;
+  background-color: hsl(60deg, 30%, 60%);
+}
+a#FacebookBadge img {
+  display: block;
+  width: 100%;
+}
+
+main > section h2,
+.ribbon-2 {
+  font-weight: bold;
+  color: hsl(60deg, 60%, 70%);
+  text-shadow: 1px 1px 1px black;
+}
+
+@media only screen and (min-width: 481px) {
+  #wrap > div > section {
+    background-image: url("../img/burton_alt_drop.png");
+    background-size: contain;
+    padding-bottom: 20%;
+  }
+}
+@media only screen and (min-width: 551px) {
+  #wrap .ribbon-2 {
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 668px) {
+  #wrap > div > section {
+    background-color: transparent;
+    background-image: url("../img/burton_white_drop.png");
+    background-position: 5% 100%;
+    background-size: 80%;
+    padding-bottom: 15%;
+    box-shadow: none;
+    border-width: 0;
+    border-radius: 0;
+    height: auto;
+  }
+}
+@media only screen and (min-width: 813px) {
+  #wrap > div {
+    display: flex;
+  }
+  #wrap > div > section {
+    padding: 1em;
+    margin: 0.75em;
+    background-color: hsla(34deg, 78%, 91%, 0.6);
+    background-color: rgba(255, 255, 255, 0.8);
+    background-image: url("../img/burton_color.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 95% top;
+    box-shadow: 1px 1px 3px black;
+    border: solid 1px white;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    flex: 2 0 0;
+    min-width: 13.2em;
+    border-radius: 16px;
+  }
+  #wrap > div > section a#FacebookBadge {
+    width: 50%;
+    padding: 3px 0;
+    border-radius: 4px;
+    background-color: hsl(0deg, 68%, 30%);
+    margin: auto 0 1em;
+    display: block;
+  }
+  #wrap > div > main {
+    flex: 7 1 1em;
+  }
+  #wrap > div > main .ribbon-2 {
+    --f: 10px; /* control the folded part*/
+    --r: 15px; /* control the ribbon shape */
+    --t: 10px; /* the top offset */
+    color: whitesmoke;
+    position: absolute;
+    inset: var(--t) calc(-1 * var(--f)) auto auto;
+    padding: 10px 10px 20px calc(10px + var(--r));
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--f)), calc(100% - var(--f)) 100%, calc(100% - var(--f)) calc(100% - var(--f)), 0 calc(100% - var(--f)), var(--r) calc(50% - var(--f) / 2));
+    background: rgb(49, 2, 73);
+    background-color: hsl(0deg, 68%, 30%);
+    color: hsl(350deg, 100%, 92%);
+    box-shadow: 0 calc(-1 * var(--f)) 0 inset rgba(0, 0, 0, 0.3333333333);
+    margin: 0.5em 0 0;
+    font-size: 1.5em;
+  }
+  #wrap > div > main > section > aside a {
+    border-color: black;
+    box-shadow: none;
+  }
+  #wrap > div > main > section > aside a:hover {
+    filter: saturate(2);
+    border-color: blue;
+  }
+  #wrap > div > main a#FacebookBadge {
+    display: none;
+  }
+  .js #wrap,
+.no-js #wrap {
+    width: 1024px;
+    width: 80%;
+    min-width: 720px;
+    text-align: center;
+    margin: 2% auto;
+    border: solid 1px;
+    background-repeat: no-repeat;
+    background-image: url("../img/main.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    box-shadow: 0 0 50px black;
+    overflow: hidden;
+  }
+  .js #wrap > div,
+.no-js #wrap > div {
+    background-color: transparent;
+  }
+}
+/*https://codepen.io/t_afif/pen/dyZOBex*/
+.accordion {
+  position: relative;
+  z-index: 3;
+  background-color: transparent;
+  font: 1em Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.accordion input {
+  display: none;
+}
+.accordion input:checked + ul {
+  z-index: 2;
+  opacity: 0.95;
+  left: calc(100% - 11em);
+}
+.accordion input:checked + ul > li {
+  height: 2.5em;
+}
+.accordion label {
+  background: 50% 1% url("../img/wheel.png") no-repeat firebrick;
+  background-size: 100%;
+  transition: transform 1s;
+  border-radius: 50%;
+  border: solid 1px white;
+  position: absolute;
+  right: calc(54px + 22 * (100vw - 269px) / 106);
+  top: calc(20px + 10 * (100vw - 269px) / 106);
+  width: calc(36px + 14 * (100vw - 269px) / 106);
+  height: calc(36px + 14 * (100vw - 269px) / 106);
+}
+.accordion label:hover {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+  background-color: hsl(0deg, 68%, 33%);
+}
+.accordion ul {
+  width: 11em;
+  position: absolute;
+  top: 6.5em;
+  left: -99em;
+  background-color: transparent;
+}
+.accordion ul li {
+  margin: 0;
+  display: block;
+}
+.accordion ul > li {
+  height: 0;
+  line-height: 2.4;
+  transition: height 0.9s ease-out;
+}
+.accordion ul > li a {
+  display: block;
+  border: solid 1px grey;
+  border-radius: 0;
+  padding: 0 0.5em;
+  background-color: rgba(0, 0, 20, 0.95);
+  background-color: hsl(0deg, 68%, 30%);
+  color: white;
+}
+.accordion ul > li a:hover {
+  background-color: hsl(0deg, 88%, 10%);
+  color: palegoldenrod;
+}
+.accordion ul > li.hi a {
+  background: hsl(0deg, 68%, 42%);
+  color: white;
+}
+.accordion ul > li.hi a:hover {
+  background-color: hsl(0deg, 88%, 10%);
+  color: palegoldenrod;
+}
+
+@media only screen and (min-width: 376px) {
+  .accordion label {
+    right: calc(77px + 23 * (100vw - 375px) / 105);
+    top: calc(30px + 12 * (100vw - 375px) / 105);
+    width: calc(50px + 10 * (100vw - 375px) / 105);
+    height: calc(50px + 10 * (100vw - 375px) / 105);
+  }
+  .accordion ul {
+    top: calc(88px + 15 * (100vw - 320px) / 105);
+  }
+  .accordion input:checked + ul {
+    left: calc(180px + 50 * (100vw - 320px) / 105);
+  }
+}
+@media only screen and (min-width: 481px) {
+  .accordion label {
+    position: absolute;
+    top: 1.25em;
+    right: 2em;
+    height: 5em;
+    width: 5em;
+    background-position: 50% 100%;
+  }
+  .accordion ul {
+    top: 7em;
+  }
+  .accordion input:checked + ul {
+    left: auto;
+    right: 0;
+  }
+}
+@media only screen and (min-width: 813px) {
+  nav.accordion ul {
+    width: 70%;
+    z-index: 1;
+    position: relative;
+    left: auto;
+    top: auto;
+  }
+  nav.accordion ul > li {
+    margin: 0 0 0.5em;
+    height: auto;
+    line-height: normal;
+  }
+  nav.accordion ul > li a {
+    padding: 0.5em;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: hsl(0deg, 68%, 30%);
+    border-radius: 8px;
+    text-decoration: none;
+  }
+  nav.accordion ul > li a:hover {
+    background-color: white;
+    color: hsl(80deg, 100%, 30%);
+  }
+  nav.accordion ul > li.hi a {
+    background-color: white;
+    color: hsl(80deg, 100%, 30%);
+    font-weight: bold;
+  }
+  nav.accordion ul > li.hi a:hover {
+    background-color: white;
+    color: hsl(80deg, 100%, 30%);
+  }
+  nav.accordion label {
+    display: none;
+  }
+  nav.accordion input:checked + ul > li {
+    height: auto;
+  }
+}
+figure.snip0022 {
+  position: absolute;
+  overflow: hidden;
+  width: 140px;
+  height: 140px;
+  text-align: center;
+  float: right;
+  right: 0px;
+  bottom: 0px;
+  margin: 0;
+  font-size: 1.25em;
+  color: hsl(0deg, 75%, 20%);
+  color: white;
+  border: solid 0 red;
+}
+figure.snip0022 aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  position: relative;
+  padding: 20% 0 0 0;
+  top: 35%;
+  z-index: 4;
+  background: url("../img/phone_white.png") no-repeat center top/60%;
+  text-shadow: 1px 1px 1px black;
+}
+figure.snip0022 > * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+figure.snip0022 > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+figure.snip0022 > div:before {
+  position: absolute;
+  inset: 0 0 0 0;
+  content: "";
+  opacity: 1;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+  background-image: linear-gradient(-45deg, hsl(24deg, 55%, 20%), transparent 70%);
+}
+figure.snip0022 > div #x {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  bottom: 6px;
+  right: 6px;
+  z-index: 3;
+  opacity: 0;
+  background: url("../img/nav.png") no-repeat left bottom;
+}
+figure.snip0022 .curl {
+  width: 0px;
+  height: 0px;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(242, 242, 242, 0.9) 20%, rgba(187, 187, 187, 0.85) 38%, rgba(171, 171, 171, 0.8) 44%, rgba(135, 135, 135, 0.75) 50%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.3) 80%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease;
+}
+figure.snip0022:hover .curl {
+  width: 100px;
+  height: 100px;
+}
+figure.snip0022:hover {
+  color: hsl(60deg, 60%, 70%);
+}
+figure.snip0022:hover #x {
+  opacity: 0.7;
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+}
+
+@media only screen and (min-width: 813px) {
+  .outings figure.snip0022 > div, .gallery figure.snip0022 > div {
+    background-image: linear-gradient(-45deg, olive, transparent 55%);
+  }
+  figure.snip0022 > div:before {
+    background-image: none;
+  }
+  figure.snip0022:hover aside {
+    background-image: url("../img/phone_color.png");
+  }
+}
+.home main {
+  padding: 0 1em 1em;
+}
+.home main > h2 {
+  color: hsl(80deg, 70%, 70%);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: calc(20px + 8 * (100vw - 320px) / 230);
+  text-shadow: 1px 1px 1px black;
+  margin: 0.5em 0;
+  text-align: center;
+  line-height: 1;
+  padding: 0 0.5em 0 0;
+  position: relative;
+  z-index: 0;
+}
+.home main > h2 small {
+  color: white;
+  font-size: 0.7em;
+}
+.home main > h2 em {
+  color: white;
+}
+.home .ribbon-2 {
+  margin: 0;
+}
+.home .ribbon-2 a {
+  color: hsl(55deg, 100%, 60%);
+  font-size: 0.9em;
+}
+.home .banner {
+  display: none;
+}
+.home section.article {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: calc(10px + 3 * (100vw - 320px) / 230);
+  text-align: center;
+}
+.home section.article article {
+  padding: 1.5em 1em 1em;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: solid 1px white;
+  background-color: hsla(34deg, 78%, 91%, 0.7);
+  border-radius: 0 0 14px 14px;
+  border-width: 0 1px 1px;
+  text-align: justify;
+  margin: 0 auto 0.75em;
+  z-index: 1;
+  position: relative;
+}
+.home section.article article p:first-child {
+  font-size: 1.2em;
+}
+.home section.article article p {
+  margin: 0 0 0.5em;
+}
+.home section.article article p:last-child::after {
+  content: "Please phone or text Selina on 07966 702640";
+}
+.home section.article #circle {
+  display: none;
+}
+.home #wrap {
+  background-image: none;
+}
+.home #wrap > div {
+  background-image: linear-gradient(rgba(11, 0, 33, 0.9), transparent 25%);
+}
+
+#fallback {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  border: solid 1px white;
+  border-radius: 14px 14px 0 0;
+  border-width: 1px 1px 0;
+}
+
+#fallback img {
+  width: 100%;
+  display: block;
+  border-radius: 13px 13px 0 0;
+}
+
+@media only screen and (min-width: 551px) {
+  .home #wrap {
+    background-image: url("../img/main.jpg");
+    background-position: 60% top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .home #wrap main {
+    padding: 1em 0;
+  }
+  .home #wrap main h2 {
+    text-align: right;
+    font-family: Whisper, Georgia, "Times New Roman", Times, serif;
+    color: hsl(80deg, 90%, 50%);
+    font-weight: normal;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: calc(26px + 10 * (100vw - 550px) / 263);
+    margin: 0;
+    padding: 0.3em 0 0.3em 0.2em;
+    bottom: calc(222px + 0 * (100vw - 550px) / 263);
+    padding-right: calc(160px - 20 * (100vw - 550px) / 263);
+  }
+  .home #wrap main .ribbon-2 {
+    margin: 0.5em 0.75em 0;
+    text-align: left;
+  }
+  .home #wrap main section.article {
+    padding: 0.75em;
+    font-size: 1em;
+  }
+  .home #wrap main section.article article {
+    margin: 0em 1em;
+    border-radius: 14px;
+    border-width: 1px;
+    padding: 1em;
+    position: static;
+  }
+  .home #wrap main section.article article p:last-child {
+    margin: 0;
+  }
+  .home #wrap main section.article article p:last-child::after {
+    content: none;
+  }
+  .home #wrap main .banner {
+    padding: 0 2em;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    flex-direction: column;
+  }
+  .home #wrap main .banner p {
+    background-color: hsl(80deg, 60%, 40%);
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.9em;
+    padding: 1em 2em 0;
+    position: relative;
+    z-index: 2;
+    width: 5em;
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+  }
+  .home #wrap main .banner p a {
+    font-size: 1.4em;
+    color: yellow;
+    margin: 0.3em 0 0;
+    text-shadow: 1px 1px 1px black;
+  }
+  .home #wrap main .banner:after {
+    content: "";
+    border: solid 3.39em;
+    font-size: 1.2em;
+    --col: hsla(80, 60%, 40%, 1);
+    border-color: var(--col) var(--col) transparent var(--col);
+    position: relative;
+    top: -2.5em;
+    z-index: 1;
+  }
+  #fallback {
+    display: none;
+  }
+}
+@media only screen and (min-width: 813px) {
+  .home #wrap main {
+    margin: 1em;
+    padding: 0;
+  }
+  .home #wrap main h2 {
+    bottom: 0;
+    margin: 59px 0 6em;
+    padding: 0 1em;
+    background-color: transparent;
+    font-size: calc(36px + 10 * (100vw - 813px) / 467);
+  }
+  .home #wrap main .banner {
+    display: none;
+  }
+  .home #wrap main .ribbon-2 {
+    margin: 0;
+  }
+  .home #wrap main .ribbon-2 a {
+    color: pink;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px black;
+  }
+  .home #wrap main .ribbon-2 a:hover {
+    color: white;
+  }
+  .home #wrap main section.article {
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+  .home #wrap main section.article article p {
+    margin: 0 0 0.5em 0;
+    line-height: 1.3;
+  }
+  .home #wrap main section.article article p:first-child {
+    font-size: 1.15em;
+  }
+  .home #wrap main section.article article p:nth-child(3) {
+    margin: 0.5em 1em 0 0;
+  }
+  .home #wrap main section.article article p:nth-child(4) {
+    margin: 0.5em 6.5em 0 0;
+  }
+  .home #wrap main section.article #circle {
+    color: #333;
+    text-decoration: none;
+    background: white url("../img/phone_sprite.png") no-repeat center 30%/70%;
+    font-size: calc(13px + 2 * (100vw - 812px) / 468);
+    margin: 0;
+    border: 0.4em solid white;
+    line-height: 0.9;
+    position: absolute;
+    bottom: -3em;
+    right: -2em;
+    width: 9em;
+    height: 9em;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .home #wrap main section.article #circle strong {
+    font-size: 1.1em;
+    color: hotpink;
+  }
+  .home #wrap main section.article #circle strong:first-child {
+    color: hsl(0deg, 84%, 25%);
+    margin: 0.7em 0 0.2em;
+  }
+  .home #wrap main section.article #circle:hover {
+    background-color: pink;
+    background-position: center -40%;
+  }
+  .home #wrap main section.article #circle img {
+    width: 100%;
+    display: block;
+    margin-bottom: -6.2em;
+  }
+  .home #wrap {
+    background-image: url("../img/main_crop2.jpg");
+  }
+  .home #wrap > div {
+    background-image: none;
+  }
+}
+@media only screen and (min-width: 1111px) {
+  .home #wrap main section.article article p:nth-child(3) {
+    margin: 0.5em 5em 0 0;
+  }
+}
+.no-js #viewer {
+  margin: 9%;
+  padding: 4px;
+}
+
+.no-js #slides a:hover img {
+  border-color: blue;
+}
+
+#slides a,
+#slides img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.no-js #slides a {
+  display: inline-block;
+  width: 30%;
+  border: solid 4px white;
+  margin: 0;
+  vertical-align: top;
+}
+
+.gallery main {
+  display: flex;
+  flex-direction: column;
+  margin: 0.75em 0.75em 0.75em 0;
+  background-color: rgba(255, 255, 255, 0.4);
+  background-color: hsla(34deg, 78%, 91%, 0.6);
+  margin: 0;
+  padding: 0.75em;
+  background-color: transparent;
+}
+.gallery main article {
+  background-color: white;
+  width: 94%;
+  padding: 1em 0;
+  margin: 10% auto 20%;
+  box-shadow: 0 0 9px black;
+  z-index: 2;
+}
+.gallery main article .prev {
+  width: 94%;
+  display: block;
+  margin: auto;
+}
+.gallery main article .prev img {
+  width: 100%;
+  display: block;
+}
+.gallery main article #viewer {
+  border: solid 1px;
+  width: auto;
+  background-color: white;
+  display: flex;
+}
+.js .gallery main article #viewer {
+  margin: auto;
+  padding: 3% 2%;
+  width: 94%;
+  border: solid 0;
+  background-color: black;
+  background: radial-gradient(black 15%, transparent 16%) 0 0, radial-gradient(black 15%, transparent 16%) 8px 8px, radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 0 1px, radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 8px 9px;
+  background-color: #282828;
+  background: black;
+  background-size: 16px 16px;
+  border-radius: 20px 20px 0 0;
+}
+.js .gallery main article #viewer .control {
+  height: 1.5em;
+  overflow: hidden;
+  background-color: #666;
+  background-image: url("../img/nav.png");
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  opacity: 0.8;
+  cursor: pointer;
+  margin: auto;
+  flex: 0 0 1.5em;
+}
+.js .gallery main article #viewer .control:hover {
+  opacity: 1;
+}
+.js .gallery main article #viewer .control#forward {
+  background-position: -15% 107%;
+  margin-left: 1%;
+}
+.js .gallery main article #viewer .control#back {
+  background-position: -15% -5%;
+  margin-right: 1%;
+}
+.js .gallery main article #viewer #slides {
+  overflow: hidden;
+  font-size: 2em;
+  position: relative;
+  display: flex;
+  flex: 1 1 1em;
+}
+.js .gallery main article #viewer #slides a {
+  border-radius: 10px;
+  flex: 0 0 25%;
+}
+.js .gallery main article #viewer #slides a.foo {
+  transition: transform 1s ease-out;
+}
+.js .gallery main article #viewer #slides a img {
+  border-radius: 10px;
+}
+.js .gallery main article #viewer #slides a:hover img {
+  filter: saturate(1.8);
+}
+.js .gallery main article #viewer.start #back, .js .gallery main article #viewer.end #forward {
+  opacity: 0.2;
+}
+.gallery #wrap {
+  background-image: none;
+}
+
+@media only screen and (min-width: 551px) {
+  .gallery main article {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 812px) {
+  .gallery #wrap {
+    background-image: url(../img/main.jpg);
+  }
+  .gallery #wrap main {
+    background-color: hsla(34deg, 78%, 91%, 0.6);
+    margin: 0.75em 0.75em 0.75em 0;
+  }
+  .js .gallery #wrap main article {
+    width: 90%;
+    margin: 20% auto;
+  }
+}
+#wrap.outings > div {
+  background-color: hsla(28deg, 77%, 12%, 0.5);
+}
+#wrap.outings main {
+  color: white;
+}
+#wrap.outings main section {
+  margin: 0 0 3em;
+  display: flex;
+  align-content: start;
+  color: white;
+}
+#wrap.outings main section:last-of-type {
+  margin: 0 0 7em;
+}
+#wrap.outings main section article {
+  border-top: solid 1px white;
+  padding: 0.5em 0.5em 0;
+  display: flex;
+  flex-direction: column;
+  flex: 5 1 1em;
+}
+#wrap.outings main section article p {
+  margin: 0;
+  font-size: 1.2em;
+  text-shadow: 1px 1px 1px black;
+}
+#wrap.outings main section article .external {
+  display: none;
+}
+#wrap.outings main section article img {
+  display: block;
+  width: 100%;
+}
+#wrap.outings main > p.intro {
+  margin: 1em 0;
+  font: 1.04em/1.4 Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#wrap.outings main.one section:nth-of-type(n + 5) {
+  display: none;
+}
+#wrap.outings main.two section:nth-of-type(-n + 4), #wrap.outings main.two section:nth-last-of-type(-n + 4) {
+  display: none;
+}
+#wrap.outings main.three section:nth-of-type(-n + 8) {
+  display: none;
+}
+
+#pagination li {
+  display: inline-block;
+  font-size: 1.5em;
+  margin: 0 0.2em 0 0;
+}
+
+#pagination a {
+  background-color: hsl(60deg, 60%, 70%);
+  color: hsl(32deg, 66%, 10%);
+  width: 2em;
+  height: 2em;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  line-height: 2;
+}
+
+#pagination a:hover,
+.one #pagination li:nth-child(1) a,
+.two #pagination li:nth-child(2) a,
+.three #pagination li:nth-child(3) a {
+  background-color: hsl(60deg, 60%, 40%);
+  color: white;
+}
+
+@media only screen and (min-width: 668px) {
+  #wrap.outings {
+    background-image: none;
+  }
+  #wrap.outings main {
+    color: white;
+    background-color: transparent;
+    margin: 0;
+  }
+  #wrap.outings main .intro {
+    margin: 1em 0;
+  }
+  #wrap.outings main article {
+    flex: 6 1 1em;
+  }
+}
+@media only screen and (min-width: 813px) {
+  #wrap.outings {
+    background-image: url("../img/main.jpg");
+  }
+  #wrap.outings > div {
+    background-color: transparent;
+  }
+  #wrap.outings main {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: rgb(49, 2, 73);
+    margin: 0.75em;
+    padding: 1em;
+  }
+  #wrap.outings main > section {
+    color: black;
+  }
+  #wrap.outings main > section:first-of-type {
+    margin: 2em 0 3em;
+  }
+  #wrap.outings main > section:last-of-type {
+    margin: 2em 0 5em;
+  }
+  #wrap.outings main > section article {
+    border-color: black;
+    flex: 7 1 1em;
+  }
+  #wrap.outings main > section article p {
+    font-size: 1.2em;
+    text-shadow: none;
+    color: black;
+  }
+  #wrap.outings main > section article p .external {
+    display: block;
+  }
+  #wrap.outings main > section article p .external a {
+    text-decoration: none;
+    color: hsl(32deg, 66%, 29%);
+    font: 0.9em Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  #wrap.outings main > section article p .external a:hover {
+    color: hsl(80deg, 100%, 25%);
+  }
+  #wrap.outings main > section article p:last-child {
+    margin-top: auto;
+  }
+  #wrap.outings main > section article p:last-of-type {
+    margin: 0 0 6em;
+  }
+  #wrap.outings main > section article h2 {
+    color: hsl(0deg, 68%, 30%);
+    text-shadow: none;
+  }
+  #wrap.outings main > p.intro {
+    margin: 4em 0 1em;
+  }
+  #pagination a {
+    background-color: hsl(340deg, 95%, 15%);
+    color: white;
+    font-size: 0.8em;
+  }
+  #pagination a:hover,
+.one #pagination li:nth-child(1) a,
+.two #pagination li:nth-child(2) a,
+.three #pagination li:nth-child(3) a {
+    background-color: hsl(340deg, 95%, 25%);
+  }
+}
+/*https://wpbeaches.com/aligning-last-item-bottom-container-flexbox/*/
+/*https://css-tricks.com/nth-child-between-two-fixed-indexes/*/
+body.contact {
+  background-image: none;
+}
+body.contact #wrap {
+  background: transparent no-repeat url("../img/main.jpg") center top/cover;
+}
+body.contact #wrap > div {
+  background-color: hsla(55deg, 37%, 62%, 0.8);
+}
+body.contact #wrap > div main {
+  margin: 0;
+  padding: 1em;
+  color: hsl(0deg, 68%, 30%);
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+body.contact #wrap > div main .ribbon-2 {
+  color: hsl(0deg, 68%, 30%);
+  text-shadow: none;
+}
+body.contact #wrap > div main > article {
+  border-radius: 0;
+  background-color: transparent;
+  padding: 0.6em;
+  margin: 0.75em 0 0;
+}
+
+form {
+  text-align: center;
+}
+form #save {
+  margin: 0 auto;
+}
+form fieldset {
+  border-width: 1px;
+  text-align: left;
+  padding: 0.5em;
+  margin: 1em 0;
+}
+form fieldset legend {
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+form fieldset label,
+form fieldset input,
+form fieldset textarea {
+  width: 100%;
+  display: block;
+}
+form fieldset:last-of-type {
+  margin: 0 0 1em;
+}
+
+@media only screen and (min-width: 668px) {
+  fieldset {
+    display: grid;
+    grid-template-columns: 10em 10px auto 15em;
+    grid-template-rows: auto 5px auto 5px;
+    border-width: 1px;
+    text-align: left;
+    padding: 0 1em 1em;
+  }
+  fieldset:nth-child(-n+2) label {
+    text-align: right;
+  }
+  fieldset label:first-of-type {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+  fieldset input:first-of-type {
+    grid-row: 1/2;
+    grid-column: 3/5;
+  }
+  fieldset label:last-of-type {
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+  fieldset input:last-of-type {
+    grid-row: 3/5;
+    grid-column: 3/5;
+  }
+  fieldset:nth-child(3) label:first-of-type {
+    grid-column: 1/2;
+  }
+  fieldset:nth-child(3) input:first-of-type {
+    grid-column: 3/5;
+  }
+  fieldset textarea {
+    grid-column: 1/5;
+    grid-row: 2/3;
+  }
+  fieldset:last-of-type {
+    grid-template-rows: repeat(1, 1fr);
+    row-gap: 0.5em;
+  }
+  fieldset:last-of-type label:first-of-type {
+    grid-column: 1/5;
+    grid-row: 1/2;
+  }
+  .contact #wrap {
+    margin: 0;
+    width: auto;
+    padding: 0;
+  }
+}
+@media only screen and (min-width: 813px) {
+  body.contact {
+    background-image: url(../img/wood.jpg);
+  }
+  body.contact #wrap {
+    margin: 2% auto;
+    width: 90%;
+  }
+  body.contact #wrap > div {
+    background-color: hsla(55deg, 37%, 62%, 0.8);
+  }
+  body.contact #wrap > div > section {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  body.contact #wrap > div main {
+    background-color: transparent;
+    padding: 0.75em;
+    margin: 0.75em 0 0;
+    flex: 6 1 1em;
+  }
+  body.contact #wrap > div main > article {
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2em;
+    margin: 4em 0 0;
+    box-shadow: 1px 1px 3px black;
+  }
+  body.contact #wrap > div main .ribbon-2 {
+    margin: 0.5em 0 0;
+    color: pink;
+    text-shadow: 1px 1px 1px black;
+  }
+  body.contact fieldset {
+    margin: 0 0 1em;
+  }
+  body.contact fieldset legend {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .contact #wrap {
+    margin: 2% auto;
+    width: 80%;
+  }
+  .contact #wrap > div > main {
+    flex: 7 1 1em;
+  }
+  .contact #wrap > div > main .ribbon-2 {
+    margin: 0.5em 0 0;
+  }
+  .contact #wrap > div > main > article {
+    margin: 4em 0 0;
+  }
+  form {
+    width: auto;
+  }
+  form fieldset {
+    grid-template-columns: 15em 10px auto 10em;
+    grid-template-rows: auto 10px auto;
+    margin: 0 0 4em;
+    text-align: left;
+    width: auto;
+  }
+  form fieldset legend {
+    font-size: calc(1em + 0.5em * (100vw - 564px) / 716);
+  }
+  form fieldset:last-of-type {
+    row-gap: 10px;
+  }
+  form fieldset:last-of-type textarea {
+    margin: 0 0 1em;
+    grid-row: 2/4;
+    grid-column: 1/5;
+  }
+  form fieldset:last-of-type label {
+    text-align: left;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
