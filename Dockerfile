@@ -11,4 +11,4 @@ COPY . .
 
 # Run BusyBox httpd
 EXPOSE 3000
-CMD ["busybox", "httpd", "-f", "-v", "-p", "3000"]
+#CMD ["busybox", "httpd", "-f", "-v", "-p", "3000"]
